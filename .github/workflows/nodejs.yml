@@ -14,14 +14,14 @@ jobs:
         node-version: [8.x, 10.x, 12.x]
 
     steps:
-    - env:
-        PUBLISH_NPMRC: ${{ secrets.PUBLISH_NPMRC }}
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and test
+      env:
+        PUBLISH_NPMRC: ${{ secrets.PUBLISH_NPMRC }}
       run: |
         echo "${PUBLISH_NPMRC}" > .publish_npmrc
         npm install
