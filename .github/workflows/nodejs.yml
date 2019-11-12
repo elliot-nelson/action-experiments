@@ -21,8 +21,12 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and test
       run: |
-        npm ci
+        echo "${PUBLISH_NPMRC}" > .publish_npmrc
+        npm install
         npm run build --if-present
         npm test
+        cat .publish_npmrc
+        echo done
       env:
+        PUBLISH_NPMRC: ${{ secrets.PUBLISH_NPMRC }}
         CI: true

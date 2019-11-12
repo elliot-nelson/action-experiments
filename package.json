@@ -1,0 +1,19 @@
+{
+  "name": "action-experiments",
+  "version": "1.0.0",
+  "description": "Experiments with GH Actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo Good all tests && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elliot-nelson/action-experiments.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elliot-nelson/action-experiments/issues"
+  },
+  "homepage": "https://github.com/elliot-nelson/action-experiments#readme"
+}
